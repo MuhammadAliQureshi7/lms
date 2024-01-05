@@ -1,0 +1,326 @@
+body{
+    background-color: #f7f7f7;
+    font-family: 'K2D', sans-serif;
+}
+a:hover,a:focus{
+    text-decoration: none !important;
+}
+.no-padding{
+    padding: 0;
+}
+.login{
+    background-color: #13202B;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.login-panel{
+    background-color: #fff;
+    margin-top: 100px;
+    border-bottom: 3px solid #007cfb;
+}
+.login-panel .left-panel{
+    background-color: #007cfb;
+    padding: 126px 20px;
+    text-align: center;
+    color: #fff;
+}
+.login-panel .left-panel h2{
+    font-size: 36px;
+    font-weight: bold;
+    margin:0;
+}
+.login-panel .left-panel h3{
+    font-size: 22px;
+    margin: 0;
+}
+.login-panel .left-panel ul{
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+.login-panel .left-panel ul li{
+    display: block;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+.login-panel .left-panel ul li::before{
+    font-family: fontawesome;
+    content:"\f058";
+    margin-right: 5px;
+    font-size: 14px;
+}
+.login-panel .form{
+    padding: 103px 50px;
+    position: relative;
+    overflow: hidden;
+    height: 465px;
+}
+.login-panel .form::after {
+	background-image: url(../images/a.png);
+	content: "";
+	width: 300px;
+	position: absolute;
+	height: 300px;
+	background-size: cover;
+	bottom: -26%;
+	left: -30%;
+	opacity: 0.2;
+	z-index: 0;
+}
+.login-panel .form .field{
+    padding: 10px 0;
+}
+.login-panel .form label{
+    display: block;
+    color: #b1b1b1;
+}
+.login-panel .form label span{
+    color: red;
+    font-size: 12px;
+}
+.login-panel .form input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b1b1b1;
+}
+.login-panel .form span p{
+    display: inline;
+    font-size: 12px;
+    margin: 0;
+}
+.login-panel .form a{
+    color: #b1b1b1;
+    float: right;
+    display: inline-block;
+    font-size: 12px;
+}
+.login-panel .form button{
+    background-color: #007cfb;
+    color: #fff;
+    border: none;
+    float: right;
+    padding: 5px 15px;
+    border-radius: 2px
+}
+.create p{
+    color: #fff;
+    text-align: right;
+    padding: 5px 0;
+    font-size: 12px;
+}
+.create p a{
+    color: #007cfb;
+}
+.page .col-lg-1{
+    position: relative;
+}
+.page .nav-custom{
+    background-color: #13202B;
+    width: 113px;
+    height: 100%;
+    position: fixed;
+}
+.page .nav-custom .logo{
+    padding: 20px;
+}
+.page .nav-custom .logo img{
+    width: 100%;
+}
+.page .nav-custom .nav{
+    margin-top: 20px;
+}
+.page .nav-custom .nav ul{
+    padding: 0;
+    margin: 0;
+}
+.page .nav-custom .nav ul li{
+    display: block;
+    padding: 15px 10px;
+    text-align: center;
+    border-top:1px solid #b1b1b1;
+    font-size:16px; 
+}
+.page .nav-custom .nav ul li:last-child{
+    border-bottom: 1px solid #b1b1b1;
+}
+.page .nav-custom .nav ul li a{
+    color: #fff;
+}
+.page .header{
+    background: #EDEDED;
+    padding: 10px 0;
+}
+.page .header .loggedin_user .img-container{
+    width: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 2px solid #007cfb;
+    float: left;
+}
+.page .header .loggedin_user .img-container img{
+    width: 100%;
+}
+.page .header .loggedin_user .text-wrap{
+    width: 75%;
+    float: left;
+    padding: 10px 5px;
+}
+.page .header .loggedin_user .text-wrap h2{
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.page .header .loggedin_user .text-wrap h4{
+    margin: 0;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+.page .header .dropdown{
+    position: relative;
+}
+.page .header .dropdown .dropdown-toggle{
+    text-align: right;
+    font-size: 16px;
+    display: block;
+    color: #13202B;
+    cursor: pointer;
+    padding: 10px 0;
+}
+.page .header .dropdown .dropdown-toggle::after{
+    display: none;
+}
+.page .header .dropdown .dropdown-menu{
+    position: absolute;
+    right: 0;
+}
+.page .header .dropdown .dropdown-menu a{
+    display: block;
+    padding: 5px 20px;
+    color:#13202B;
+
+}
+.page .header .dropdown .dropdown-menu a:last-child{
+    border-top: 1px solid #efefef;
+}
+.page .section .count{
+    padding: 20px 0;
+    color: #73879C;
+    text-align: center;
+}
+.page .section .count .panel{
+    border:1px solid #73879C;
+}
+.page .section .count h5{
+    font-size: 14px;
+    font-weight: normal;
+    te
+}
+.page .section .count h5 i{
+    margin-right: 5px;
+    font-size: 16px;
+}
+.page .section .count h3{
+   font-size: 36px;
+   font-weight: bold;
+}
+.page .section .ongoing_projects{
+    color: #007cfb;
+    border-color: #007cfb !important;
+}
+.page .section .team .top{
+    padding: 20px 0;
+}
+.page .section .team .top h1{
+    margin: 0;
+}
+.page .section .search input{
+    width: 100%;
+    border: 1px solid #d1d1d1;
+    padding: 5px 10px;
+    border-radius: 20px 0 0 20px;
+    border-right: none;
+}
+.page .section .search button{
+    background-color: #fff;
+    padding: 5px;
+    display: block;
+    width: 100%;
+    border: 1px solid #d1d1d1;
+    border-radius: 0 20px 20px 0;
+    border-left: none;
+}
+.page .section .panel{
+    padding: 20px 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 0;
+}
+.page .section .panel h2{
+    margin: 0;
+    font-size: 24px;
+}
+.page .section .panel button{
+    float: right;
+    margin-bottom: 5px;
+}
+.page .section .table{
+    padding: 20px 0;
+    border-top: 2px solid #eee;
+}
+.page .section .table table{
+    width: 100%;
+}
+.page .section .table table thead{
+    background-color: #13202B;
+    color: #fff;
+}
+.page .section .table table thead th{
+    padding: 5px 10px;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.page .section .table table tbody td{
+    padding: 5px 10px;
+}
+.page .section .table table tbody td img{
+    width:35px;
+    border: 3px solid #ccc;
+}
+.page .section .table table tbody tr:nth-child(even){
+    background-color: #eee;
+}
+.page .modal .modal-header{
+    background-color: #13202B;
+    border: none;
+    color: #fff;
+}
+.page .modal .modal-header .close{
+    color: #fff;
+}
+.page .modal .modal-body .field{
+    padding:10px 0;
+}
+.page .modal .modal-body .field label{
+    display: block;
+    font-size: 13px;
+}
+.page .modal .modal-body .field label span{
+    color: red;
+    font-size: 10px;
+}
+.page .modal .modal-body .field input{
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #13202B;
+}
+.page .modal .modal-body .field input[type="file"]{
+    border: none;
+}
+.page .profile .panel .img-container{
+    border:3px solid #EDEDED;
+}
+.page .profile .panel .img-container img{
+    width: 100%;
+}
