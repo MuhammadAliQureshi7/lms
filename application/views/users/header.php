@@ -1,6 +1,6 @@
 <div class="header">
     <div class="header-top">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-5 col-lg-5 col-md-5">
                     <div class="contact">
@@ -30,21 +30,36 @@
         </div>
     </div>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Logo</a>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Logo Here</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Courses</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Qualifications</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">How it Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Help & Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Corporate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item bg">
+                        <a class="nav-link" href="#">Special Offers</a>
                     </li>
                 </ul>
                 <ul class="extras">

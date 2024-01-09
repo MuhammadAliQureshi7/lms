@@ -7,22 +7,26 @@
 <?php include('header.php');?>
 <div class="section">
     <div class="banner">
-        <div class="overlay">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="text-wrap">
-                            <h3>Lorem ipsum dolor sit amet</h3>
-                            <h1 class="animate-typing" data-animate-loop="true">Lorem ipsum | consectetur | lacinia a leo</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan, dolor non sollicitudin efficitur, eros ligula egestas sem, eu ullamcorper odio quam ut nunc. Integer nisl urna, lacinia a leo in, pellentesque pretium est. Sed erat odio, suscipit non lectus eget, rhoncus vehicula dolor. </p>
-                            <a href="#" class="btn-custom">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                Explore
-                            </a>
-                        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="text-wrap">
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <h1 class="animate-typing" data-animate-loop="true">Lorem ipsum | consectetur | lacinia a leo</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan, dolor non sollicitudin efficitur, eros ligula egestas sem, eu ullamcorper odio quam ut nunc. Integer nisl urna, lacinia a leo in, pellentesque pretium est. Sed erat odio, suscipit non lectus eget, rhoncus vehicula dolor. </p>
+                        <a href="#" class="btn-custom">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Explore
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6 no-padding">
+                    <div class="img-box">
+                        <img src="<?php echo base_url('assets/images/banner.jpg'); ?>" alt="">
                     </div>
                 </div>
             </div>
