@@ -7,6 +7,7 @@ class Login extends CI_Controller {
         if($this->session->userdata('id')){
             return redirect('admin/dashboard');
         }
+        $this->load->model('admin/loginmodel');
     }
     public function index(){
         $this->load->library('form_validation');
@@ -18,7 +19,7 @@ class Login extends CI_Controller {
             $pass=$this->input->post('password');
 
             $pass = md5($pass);
-            $this->load->model('loginmodel');
+            
             $login_id=$this->loginmodel->isvalidate($user,$pass);
             if($login_id){
                 $this->session->set_userdata('id',$login_id);

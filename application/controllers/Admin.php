@@ -6,12 +6,13 @@ class Admin extends CI_Controller {
         if(!$this->session->userdata('id')){
             return redirect('login/index');
         }
+        $this->load->model('admin/admin_model');
     }
     public function index(){
         return redirect('admin/dashboard');
     }
     public function dashboard(){
-        $this->load->model('loginmodel');
+        $this->load->model('admin/loginmodel');
         $data['userinfo']=$this->loginmodel->get_userinfo();
         // $data['count']=$this->loginmodel->getcount();
         // $data['teamcount']=$this->loginmodel->getteamcount();
@@ -29,7 +30,7 @@ class Admin extends CI_Controller {
     }
 
     public function subjects(){
-        $this->load->model('loginmodel');
+        $this->load->model('admin/loginmodel');
         $data['userinfo']=$this->loginmodel->get_userinfo();
         $data['title']="Subjects";
         $this->load->view('admin/subjects/manage',$data);
@@ -41,19 +42,19 @@ class Admin extends CI_Controller {
        $length = intval($this->input->get("length"));
  
  
-       $query = $this->db->get("subjects");
- 
- 
+       $query = $this->admin_model->get_subjects();
+        // echo "<pre>"; print_r($query); exit();
+        
        $data = [];
  
  
        foreach($query->result() as $r) {
             $data[] = array(
-                '<img src="" alt="'.$r->image.'">',
-                $r->id,                
+                '<img src="'.$r->image.'" alt="">',              
                 $r->title,
                 $r->description,
-                $r->created_at
+                $r->created_at,
+                $r->full_name
             );
        }
  
@@ -67,6 +68,42 @@ class Admin extends CI_Controller {
  
        echo json_encode($result);
        exit();
+    }
+    public function add_subject(){
+        $filename=$this->input->post('title');
+
+        $config['upload_path']='./assets/images/subjects/';
+
+        $config['allowed_types']='jpg|png|jpeg|PNG|gif';
+
+        $config['file_name']=$filename;
+        $this->load->library('upload', $config);
+        
+        if($this->upload->do_upload('image')){
+            
+
+            $post = $this->input->post();
+            $data=$this->upload->data();
+            $image_path=base_url("assets/images/subjects/".$data['raw_name'].$data['file_ext']);
+            $post['image']=$image_path;
+            $success = $this->admin_model->add_subject($post);
+            if($success){
+                $this->session->set_flashdata('msg','Subject Added Successfully');
+                $this->session->set_flashdata('msg_class','alert-success');
+                
+            }
+            else{
+                $this->session->set_flashdata('msg','Category Not Added, Please Try Again!');
+                $this->session->set_flashdata('msg_class','alert-danger');
+            }
+            redirect('admin/subjects');
+        }
+        else{
+            // echo "<pre>"; print_r($config); exit();
+            $upload_error = $this->upload->display_errors();
+            print_r($upload_error);
+
+        }
     }
 
 }

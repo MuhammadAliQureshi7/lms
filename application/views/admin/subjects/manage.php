@@ -74,14 +74,14 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <table id="item-list" class="table table-bordered table-striped table-hover">
+                                <table id="item-list" class="table table-light text-body table-bordered table-striped table-hover">
                                     <thead>
                                         <tr>
                                             <th>Image</th>
-                                            <th>ID</th>
                                             <th>Title</th>
                                             <th>Description</th>
                                             <th>Date Created</th>
+                                            <th>Created By</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -115,7 +115,25 @@
                     <h4 class="modal-title">Add Subject</h4>
                 </div>
                 <div class="modal-body">
-                    <p>Some text in the modal.</p>
+                    <form action="<?php echo base_url('admin/add_subject'); ?>" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-6 mb-1">
+                                <label for="">Title :</label>
+                                <input type="text" name="title" id="title" class="form-control">
+                            </div>
+                            <div class="col-md-6 mb-1">
+                                <label for="">Image :</label>
+                                <input type="file" name="image" id="image" class="form-control">
+                            </div>
+                            <div class="col-md-12 mt-1">
+                                <label for="">Description :</label>
+                                <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -188,7 +206,7 @@
 $(document).ready(function() {
     $('#item-list').DataTable({
         "ajax": {
-            url : "get_subjects",
+            url : "<?php echo base_url('admin/get_subjects'); ?>",
             type : 'GET'
         },
     });
